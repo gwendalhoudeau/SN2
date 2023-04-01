@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', true)
 
-mongoose.connect('mongodb+srv://' + process.env.DB_USER_PASS + '@cluster0.utwfgpm.mongodb.net/social_network_db',
+mongoose.connect('mongodb+srv://' + process.env.DB_USER_PASS + '@cluster0.yb4qdcs.mongodb.net/test',
 {
     //userNewUrlParser: true,
     //useUnifiedTopology:true,

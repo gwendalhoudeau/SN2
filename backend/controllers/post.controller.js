@@ -37,7 +37,7 @@ module.exports.createPost = async (req, res) => {
         const path2 = require('path');
         
         // Créer un chemin pour le fichier sur le serveur
-        const newFilePath = path2.join(__dirname, '..', 'client', 'public', 'uploads', 'posts', fileName);
+        const newFilePath = path2.join(__dirname, '..','..', 'frontend', 'public', 'uploads', 'posts', fileName);
         
         // Créer un flux de lecture depuis le fichier téléchargé
         const readStream = fs.createReadStream(path);

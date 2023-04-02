@@ -26,6 +26,7 @@ const SignUpForm = () => {
                 termsError.innerHTML = "veuillez valider les conditions generales"
         }
         else {
+            console.log(`${process.env.REACT_APP_API_URL}api/user/register`)
             await axios({
                 method: "post",
                 url: `${process.env.REACT_APP_API_URL}api/user/register`,

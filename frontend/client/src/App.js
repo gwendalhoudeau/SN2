@@ -11,6 +11,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchToken = async () => {
+      console.log(`${process.env.REACT_APP_API_URL}testurl`)
       await axios({
         method: "get",
         url: `${process.env.REACT_APP_API_URL}jwtid`,

@@ -9,7 +9,7 @@ const SignInForm = () => {
         e.preventDefault()
         const emailError = document.querySelector('.email.error')
         const passwordError = document.querySelector('.password.error')
-
+        console.log(`${process.env.REACT_APP_API_URL}api/user/login`)
         axios({
             method: "post",
             url: `${process.env.REACT_APP_API_URL}api/user/login`,

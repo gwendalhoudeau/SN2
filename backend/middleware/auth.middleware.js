@@ -26,10 +26,13 @@ module.exports.requireAuth = (req,res,next) => {
     const token = req.cookies.jwt
     console.log('token dans requireauth:',token)
     if (token) {
+        console.log(5464654654654)
         jwt.verify(token, process.env.TOKEN_SECRET, async (err,decodedToken) => {
             if (err) {
+                console.log(1)
                 console.log(err)
             } else {
+                console.log(2)
                 //console.log(decodedToken.id)
                 next()
             }

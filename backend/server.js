@@ -13,7 +13,11 @@ const app = express();
 
 const corsOptions = {
     origin: process.env.CLIENT_URL,
-    'methods':'GET,HEAD,PUT,PATCH,DELETE,POST'
+    credentials:true,
+    'allowHeaders':['sessionId','Content-Type'],
+    'exposeHeaders':['sessionId'],
+    'methods':'GET,HEAD,PUT,PATCH,DELETE,POST',
+    'preflightContinue':false
 }
 
 app.use(cors(corsOptions))
@@ -26,6 +30,8 @@ app.use(cookieParser())
 
 app.get('*',checkUser)
 app.get('/jwtid',requireAuth, (req,res) => {
+    console.log(req.body)
+    console.log(res.data)
     res.status(200).send(res.locals.user._id)
 })
 

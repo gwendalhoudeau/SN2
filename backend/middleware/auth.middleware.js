@@ -22,7 +22,9 @@ module.exports.checkUser = (req,res,next) => {
 }
 
 module.exports.requireAuth = (req,res,next) => {
+    console.log(req)
     const token = req.cookies.jwt
+    console.log('token dans requireauth:',token)
     if (token) {
         jwt.verify(token, process.env.TOKEN_SECRET, async (err,decodedToken) => {
             if (err) {

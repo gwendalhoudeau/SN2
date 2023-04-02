@@ -17,7 +17,7 @@ const App = () => {
         url: `${process.env.REACT_APP_API_URL}jwtid`,
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin':REACT_APP_API_URL
+          'Access-Control-Allow-Origin':process.env.REACT_APP_API_URL
         }
       })
         .then((res) => {

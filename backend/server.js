@@ -13,11 +13,7 @@ const app = express();
 
 const corsOptions = {
     origin: process.env.CLIENT_URL,
-    credentials:true,
-    'allowHeaders':['sessionId','Content-Type'],
-    'exposeHeaders':['sessionId'],
-    'methods':'GET,HEAD,PUT,PATCH,DELETE,POST',
-    'preflightContinue':false
+    'methods':'GET,HEAD,PUT,PATCH,DELETE,POST'
 }
 
 app.use(cors(corsOptions))

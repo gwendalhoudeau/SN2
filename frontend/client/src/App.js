@@ -16,14 +16,11 @@ const App = () => {
       await axios({
         method: "get",
         url: `${process.env.REACT_APP_API_URL}jwtid`,
-        withCredentials: true,
-        headers: {
-          'Access-Control-Allow-Origin': process.env.REACT_APP_API_URL, // Remplacez cette URL par l'URL de votre front-end sur Netlify
-          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
-        }
+        withCredentials: true
       })
         .then((res) => {
           setUid(res.data)
+          console.log(uid)
         })
         .catch((err) => console.log("no token"))
     }

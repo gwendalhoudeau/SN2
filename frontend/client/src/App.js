@@ -15,7 +15,10 @@ const App = () => {
       await axios({
         method: "get",
         url: `${process.env.REACT_APP_API_URL}jwtid`,
-        withCredentials: true
+        withCredentials: true,
+        headers:{
+          'Access-Control-Allow-Origin': 'https://sn-houdeau-gwendal.netlify.app'
+        }
       })
         .then((res) => {
           setUid(res.data)

@@ -22,7 +22,7 @@ module.exports.checkUser = (req,res,next) => {
 }
 
 module.exports.requireAuth = (req,res,next) => {
-    console.log(req)
+    console.log(req.body)
     const token = req.cookies.jwt
     console.log('token dans requireauth:',token)
     if (token) {

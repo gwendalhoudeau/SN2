@@ -33,6 +33,6 @@ module.exports.requireAuth = (req,res,next) => {
             }
         })
     } else {
-        console.log('no token')
+        console.log('pad de token')
     }
 }

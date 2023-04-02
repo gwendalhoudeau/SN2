@@ -11,6 +11,9 @@ const {checkUser, requireAuth} = require('./middleware/auth.middleware');
 const { findById } = require('./models/post.model');
 const app = express();
 
+console.log(process.env.CLIENT_URL)
+console.log(process.env.REACT_APP_API_URL)
+
 const corsOptions = {
     origin: process.env.CLIENT_URL,
     credentials:true,

@@ -30,8 +30,6 @@ app.use(cookieParser())
 
 app.get('*',checkUser)
 app.get('/jwtid',requireAuth, (req,res) => {
-    console.log(req.body)
-    console.log(res.data)
     res.status(200).send(res.locals.user._id)
 })
 

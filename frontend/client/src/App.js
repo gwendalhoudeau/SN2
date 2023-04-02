@@ -10,6 +10,7 @@ const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
+    console.log(456)
     console.log('cherche token')
     const fetchToken = async () => {
       await axios({
@@ -17,7 +18,7 @@ const App = () => {
         url: `${process.env.REACT_APP_API_URL}jwtid`,
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin': 'https://sn-houdeau-gwendal.netlify.app', // Remplacez cette URL par l'URL de votre front-end sur Netlify
+          'Access-Control-Allow-Origin': process.env.REACT_APP_API_URL, // Remplacez cette URL par l'URL de votre front-end sur Netlify
           'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
         }
       })

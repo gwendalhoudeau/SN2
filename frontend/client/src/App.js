@@ -10,6 +10,7 @@ const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
+    console.log('cherche token')
     const fetchToken = async () => {
       await axios({
         method: "get",

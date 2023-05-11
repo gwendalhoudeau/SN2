@@ -21,6 +21,8 @@ const SignInForm = () => {
 
         })
             .then((res) => {
+                console.log(123)
+                console.log(res.cookie)
                 if(res.data.errors) {
                     console.log(emailError)
                     emailError.innerHTML = res.data.errors.email
